@@ -88,6 +88,14 @@
   
   .nav-links {
     color: black;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-bottom: 2px;
+  }
+
+  .nav-links:hover {
+    text-decoration: underline;
+    background-color: #ccc;
   }
 
   nav ul {
@@ -172,14 +180,29 @@
     font-size: 20px;  
   }
   
-  .header-links
-  {
+  .header-links {
     color: white;
-    margin: 45px;
+    margin: 0px 45px 0px 45px;
+    cursor: pointer;
+  }
+  
+  .header-links:hover {
+    text-decoration: underline;
   }
 
-  .footer-links
-  {
+  .rowC {
+    display:flex; 
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+}
+  
+  .footer-links {
     color: white;
-    margin: 45px;
+    margin: 0px 45px 0px 45px;
+    cursor: pointer;
+  }
+
+  .footer-links:hover {
+    text-decoration: underline;
   }

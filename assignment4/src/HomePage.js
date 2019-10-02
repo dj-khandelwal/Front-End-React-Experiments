@@ -2,7 +2,9 @@ import React from 'react';
 import './stylesheet.css';
 import Header from "./Header.js";
 import {Footer} from "./Footer.js";
-import GridSection from "./GridSection.js";
+import NavMenu from "./NavMenu.js";
+import GridContent from "./GridContent.js";
+import GridComments from "./GridComments.js";
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -27,26 +29,44 @@ class HomePage extends React.Component {
         ProductivitySystems: true,
         SenseOfDirection: true
     };
-    testStr = "Experiments";
-    state = {showMe: 
-        {
-            id: this.testStr,
-            showComments: this.commentsVisibility[this.testStr]
-        }
-    };
 
-    checkPage = (id) => {
-        this.setState({showMe:id}); 
+    checkPage = (target) => {
+        console.log("HELLO!");
+        console.log(target);
+        this.setState(state => ({showMe: {
+            id: target,
+            showComments: this.commentsVisibility[target]
+        }})); 
+        console.log(this.state.showMe);
     }
 
     render() {
-        return (
-            <div class = 'grid-container'>
-                <Header checkPage = {this.checkPage} />
-                <GridSection showMe = {this.state.showMe} />
-                <Footer />
-            </div>
-        );
+        console.log("RENDER!");
+        console.log(this.state.showMe);
+        if (this.state.showMe.showComments) {
+            return (
+                <div class = 'grid-container'>
+                    <Header checkPage = {this.checkPage.bind(this)} />
+                    <section class = "grid-section">
+                    <NavMenu checkPage = {this.checkPage.bind(this)} /> 
+                    <GridContent showMe = {this.state.showMe} />
+                    <GridComments />
+                    </section>
+                    <Footer checkPage = {this.checkPage.bind(this)}/>
+                </div>
+            );
+        } else {
+            return (
+                <div class = 'grid-container'>
+                    <Header checkPage = {this.checkPage.bind(this)} />
+                    <section class = "grid-section">
+                    <NavMenu checkPage = {this.checkPage.bind(this)} /> 
+                    <GridContent showMe = {this.state.showMe} />
+                    </section>
+                    <Footer checkPage = {this.checkPage.bind(this)}/>
+                </div>
+            );
+            }
     }
 }
 

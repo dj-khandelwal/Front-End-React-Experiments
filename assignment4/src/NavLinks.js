@@ -4,14 +4,11 @@ import './stylesheet.css';
 class NavLinks extends React.Component {
   constructor(props) {
       super(props); 
-      this.handleLinkClick = this.handleLinkClick.bind(this);
+      //this.handleLinkClick = this.handleLinkClick.bind(this);
     }
-  handleLinkClick = (value) => {
-    this.props.checkPage(value); 
-  }
   render() {
       return (
-          <p><a class = "header-links" href = "index.js" /*onClick = {this.handleLinkClick("index")}*/>Home</a><a class = "header-links" href = "ContactUs.js">Contact Us</a><a class = "header-links" href = "./AboutUs.js">About Us</a></p>
+          <div class = {this.props.classname} onClick={this.props.onClick}>{this.props.text}</div>
       );
   }
 }

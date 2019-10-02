@@ -12,39 +12,38 @@ import ContactUsContent from './content/ContactUsContent.js';
 class GridContent extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {showMe: props.showMe};
     }
     
     render() {
-        if (this.state.showMe.id === "HomePage") {
+        if (this.props.showMe.id === "HomePage") {
             return (
                 <HomePageContent />  
             );
-        } else if (this.state.showMe.id === "AboutUs") {
+        } else if (this.props.showMe.id === "AboutUs") {
             return (
                 <AboutUsContent />
             );
-        } else if (this.state.showMe.id === "Experiments") {
+        } else if (this.props.showMe.id === "Experiments") {
             return (
                 <Experiments />
             );
-        } else if (this.state.showMe.id === "GoodWriter") {
+        } else if (this.props.showMe.id === "GoodWriter") {
             return (
                 <GoodWriter />
             );
-        } else if (this.state.showMe.id === "MindfulFocus") {
+        } else if (this.props.showMe.id === "MindfulFocus") {
             return (
                 <MindfulFocus />
             );
-        } else if (this.state.showMe.id === "ProductivitySystems") {
+        } else if (this.props.showMe.id === "ProductivitySystems") {
             return (
                 <ProductivitySystems />
             );
-        } else if (this.state.showMe.id === "SenseOfDirection") {
+        } else if (this.props.showMe.id === "SenseOfDirection") {
             return (
                 <SenseOfDirection />
             );
-        } else if (this.state.showMe.id === "ContactUs") {
+        } else if (this.props.showMe.id === "ContactUs") {
             return (
                 <ContactUsContent />
             );
@@ -52,4 +51,4 @@ class GridContent extends React.Component {
     }
 }
 
-export {GridContent};
+export default GridContent;
