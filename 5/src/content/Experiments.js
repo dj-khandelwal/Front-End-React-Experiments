@@ -15,7 +15,7 @@ class Experiments extends React.Component {
   render() {
     return (
       <div class = "grid-content">
-        <article>
+        <article >
     
   <h1 id="8experimentsinmotivation">8 Experiments in Motivation</h1>
 

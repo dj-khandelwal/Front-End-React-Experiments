@@ -4,10 +4,6 @@
   
   body {
     font-family: 'Courier New', Courier, monospace;
-  } 
-
-  #current-time h5 {
-    margin: 0px;
   }
 
   .grid-container {
@@ -44,13 +40,12 @@
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
-    grid-row-end: 4; 
+    grid-row-end: 3; 
     display: inline-grid;
-    background-color: #f1f1f1;
   }
 
   section .grid-comments {
-    grid-column-start: 1;
+    grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4; 
@@ -89,14 +84,6 @@
   
   .nav-links {
     color: black;
-    cursor: pointer;
-    text-decoration: underline;
-    margin-bottom: 2px;
-  }
-
-  .nav-links:hover {
-    text-decoration: underline;
-    background-color: #ccc;
   }
 
   nav ul {
@@ -116,7 +103,7 @@
     clear: both;
   }
   #contact-form {
-    width: 1200px;
+    width: 1207px;
   }
   #contact-form input {
     width: 300px;
@@ -165,13 +152,13 @@
 
   #comments-display {
     margin-left: 10px; 
-    width: 1196px;
   }
   .comment-block {
     margin: 8px;
     margin-left: 10px;
     border-style: solid;
     border-width: 1px; 
+    cursor: pointer;
   }
 
   footer {
@@ -182,29 +169,14 @@
     font-size: 20px;  
   }
   
-  .header-links {
+  .header-links
+  {
     color: white;
-    margin: 0px 45px 0px 45px;
-    cursor: pointer;
-  }
-  
-  .header-links:hover {
-    text-decoration: underline;
+    margin: 45px;
   }
 
-  .rowC {
-    display:flex; 
-    flex-direction:row;
-    align-items: center;
-    justify-content: center;
-}
-  
-  .footer-links {
+  .footer-links
+  {
     color: white;
-    margin: 0px 45px 0px 45px;
-    cursor: pointer;
-  }
-
-  .footer-links:hover {
-    text-decoration: underline;
+    margin: 45px;
   }
